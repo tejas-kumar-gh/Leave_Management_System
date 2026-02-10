@@ -16,4 +16,4 @@ app.use(cookie());
 app.use("/api/auth", authRoutes);
 app.use("/api/leaves", leaveRoutes);
 
-app.listen(3000, () => console.log("Server running on port 3000"));
+app.listen(3000, () => console.log("Server running on  3000 port "));
