@@ -19,4 +19,26 @@ const getMyLeaves = (req, res) => {
   });
 };
 
-module.exports = { applyLeave, getMyLeaves };
+const getAllLeaves=(req,res)=>{
+  const sql="select l.id,l.user_id,l.start_date,l.end_date,l.reason,l.status,u.name,u.email from leaves l join users u on l.user_id=u.id"
+  db.query(sql,(err,results)=>{
+    if(err) return res.status(500).json(err)
+    
+      res.json(results)
+  })
+}
+
+const updateLeaveStatus= (req,res)=>{
+  const {leaveId,status}=req.body;
+  if(!['approved','rejected'].includes(status)){
+    return res.status(400).json({message:"Invalid status"})
+  }
+  const sql='update leaves set status = ? where id = ?';
+  db.query(sql,[status,leaveId],(err,result)=>{
+    if(err) return res.status(500).json(err)
+    
+      res.json({message:`leave ${status} successfully`})
+  })
+}
+
+module.exports = { applyLeave, getMyLeaves, getAllLeaves ,updateLeaveStatus};
