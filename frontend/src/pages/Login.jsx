@@ -42,7 +42,7 @@ export default function Login() {
           required
         />
         <button className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
-          Login
+          login
         </button>
       </form>
 
