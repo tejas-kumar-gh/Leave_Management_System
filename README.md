@@ -1,11 +1,5 @@
 # Employee Leave Management System (ELMS)
 
-[![GitHub issues](https://img.shields.io/github/issues/yourusername/employee-leave-management)](https://github.com/yourusername/employee-leave-management/issues)
-[![GitHub forks](https://img.shields.io/github/forks/yourusername/employee-leave-management)](https://github.com/yourusername/employee-leave-management/network)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/employee-leave-management)](https://github.com/yourusername/employee-leave-management/stargazers)
-[![License](https://img.shields.io/github/license/yourusername/employee-leave-management)](LICENSE)
-
----
 
 ## Overview
 
