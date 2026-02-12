@@ -8,8 +8,11 @@ const authRoutes = require("./routes/authRoutes");
 const leaveRoutes = require("./routes/leaveRoutes");
 
 const app = express();
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true
+}));
 
-app.use(cors({ origin:"http://localhost:5173", credentials:true }));
 app.use(express.json());
 app.use(cookie());
 
